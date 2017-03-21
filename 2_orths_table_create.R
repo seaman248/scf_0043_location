@@ -15,4 +15,5 @@ scf_00043_gam_genes <- gam_genes[match(scf_00043_gam_genes, gam_genes$ensembl_ge
 
 un_table <- na.omit(bind_cols(scf_00043_genes, scf_00043_gam_genes))
 
+un_table <- un_table[un_table[, 7] != 'UNKN' & un_table[, 7] != 'X', ]
 write.csv2(un_table, './input_data/un_table.csv')
