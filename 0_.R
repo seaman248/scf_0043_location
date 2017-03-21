@@ -23,7 +23,7 @@ geneSets <- lapply(sp_of_interest, function(DB_NAME){
 names(geneSets) <- sp_of_interest
 
 lapply(sp_of_interest, function(sp){
-  write.csv2(geneSets[[sp]], paste0('./input_data/', sp, '_genes.csv'))
+  write.csv2(geneSets[[sp]], paste0('./input_data/', sp, '_genes.csv'), row.names = F)
 })
 
-write.csv2(orths, './input_data/orths.csv')
+write.csv2(orths, './input_data/orths.csv', row.names = F)
