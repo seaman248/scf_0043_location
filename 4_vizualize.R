@@ -38,8 +38,7 @@ xlims <- lapply(blocks, function(block){
 comparisons <- lapply(1:(length(dna_segs)-1), function(n){
   as.comparison(data.frame(
     start1=dna_segs[[n]][,2], end1=dna_segs[[n]][,3],
-    start2=dna_segs[[n+1]][,2], end2=dna_segs[[n+1]][,3],
-    directions
+    start2=dna_segs[[n+1]][,2], end2=dna_segs[[n+1]][,3]
   ))
 })
 
